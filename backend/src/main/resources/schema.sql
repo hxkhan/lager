@@ -1,0 +1,6 @@
+CREATE TABLE Items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR_IGNORECASE(255) NOT NULL UNIQUE,
+    amount INT NOT NULL CHECK (amount >= 0),
+    last_updated TIMESTAMP NOT NULL
+);
