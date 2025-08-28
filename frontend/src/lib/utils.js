@@ -29,7 +29,7 @@ export function bsTooltip(node, content) {
 
 // Date format helper
 export function formatDate(dateString) {
-    const d = new Date(dateString);
+    const d = new Date(dateString + "Z");
     const now = new Date();
 
     const year = d.getFullYear();
