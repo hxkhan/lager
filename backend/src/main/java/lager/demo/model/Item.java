@@ -16,6 +16,9 @@ public class Item {
     @Column(nullable = false)
     private Integer amount;
 
+    @Column(nullable = false)
+    private String unit;
+
     @org.hibernate.annotations.UpdateTimestamp
     @Column(name = "last_updated", nullable = false)
     private java.time.LocalDateTime lastUpdated;
@@ -23,9 +26,10 @@ public class Item {
     // Constructors
     public Item() {}
 
-    public Item(String name, Integer amount) {
+    public Item(String name, Integer amount, String unit) {
         this.name = name;
         this.amount = amount;
+        this.unit = unit;
     }
 
     // Getters & Setters
@@ -51,6 +55,14 @@ public class Item {
 
     public void setAmount(Integer amount) {
         this.amount = amount;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public LocalDateTime getLastUpdated() {

@@ -1,0 +1,14 @@
+[Unit]
+Description=Inventory Application
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/lager
+ExecStart=/usr/bin/java -jar /opt/lager/lager.jar
+# Restart if the process crashes
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
