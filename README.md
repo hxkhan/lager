@@ -1,3 +1,6 @@
+# Inventory Application
+![Product Showcase](showcase.jpg)
+
 ## Technical Info
 
 ### Project layout
